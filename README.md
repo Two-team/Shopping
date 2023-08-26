@@ -7,8 +7,14 @@
 회원 테이블 ver2
 CREATE TABLE USERS(
 	memberId VARCHAR2(100) PRIMARY KEY,
+
+ 
 	memberPwd VARCHAR2(1000) NOT NULL,
+
+ 
 	memberName VARCHAR2(30) NOT NULL,
+
+ 
 	regDate DATE NOT NULL
 );
 
