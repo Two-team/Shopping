@@ -5,20 +5,18 @@
 - 회원가입이 안만들어진 관계로 테이블 새로 작성함 (임시)
 ### 작성한 TABLE
 회원 테이블 ver2
+
+```
 CREATE TABLE USERS(
 	memberId VARCHAR2(100) PRIMARY KEY,
-
- 
 	memberPwd VARCHAR2(1000) NOT NULL,
-
- 
 	memberName VARCHAR2(30) NOT NULL,
-
- 
 	regDate DATE NOT NULL
 );
-
+```
+```
 insert into USERS values('test', '1234', 'test', sysdate);
+```
 #-------------------------------------------------------------------------------------
 ## DB 2023-08-25 ver
 계정 생성
@@ -31,6 +29,7 @@ grant resource,connect to ci;
 commit;
 -----------------------------------------
 회원 테이블
+```
 CREATE TABLE BOOK_MEMBER(
   memberId VARCHAR2(100) PRIMARY KEY,
   memberPw VARCHAR2(100) NOT NULL,
@@ -43,7 +42,7 @@ CREATE TABLE BOOK_MEMBER(
   money number NOT NULL,
   point number NOT NULL
 );
-
+```
 commit;
 
 insert into book_member values('choikyumin', '1234', 'admin', 'admin', 'admin', 'admin', 'admin', 1, sysdate, 1000000, 1000000);
