@@ -25,18 +25,18 @@ public class UserLoginController {
 	}
 	
 	// 유저 로그인
-	@PostMapping("/login")
+	@PostMapping("user/logincheck")
 	public String login(UsersVO usersVo, HttpSession session, Model model) throws Exception {
 		
 		UsersVO vo = usersLoginService.userLogin(usersVo);
 		
 		// 아이디 값이 없는 경우
 		if (vo == null) {
-			return "";
+			return "user/login";
 		} else { // 로그인 성공
 			session.setAttribute("member", vo.getMemberId());
-			model.addAttribute("memberId", vo.getMemberId());
-			return "";
+			// model.addAttribute("memberId", vo.getMemberId());
+			return "redirect:/main";
 		}
 		
 	}

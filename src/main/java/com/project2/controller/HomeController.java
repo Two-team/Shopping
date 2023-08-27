@@ -31,7 +31,19 @@ public class HomeController {
 		String formattedDate = dateFormat.format(date);
 		
 		model.addAttribute("serverTime", formattedDate );
-		return "main";
+		return "/main";
+	}
+	
+	@RequestMapping(value = "/main", method = RequestMethod.GET)
+	public String main(Locale locale, Model model) {
+		
+		Date date = new Date();
+		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
+		
+		String formattedDate = dateFormat.format(date);
+		
+		model.addAttribute("serverTime", formattedDate );
+		return "/main";
 	}
 	
 }
