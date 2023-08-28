@@ -23,3 +23,14 @@ CREATE TABLE BOOK_MEMBER(
 commit;
 
 insert into book_member values('choikyumin', '1234', 'admin', 'admin', 'admin', 'admin', 'admin', 1, sysdate, 1000000, 1000000);
+
+----------------------------------------
+회원 테이블 ver2
+CREATE TABLE USERS(
+	memberId VARCHAR2(100) PRIMARY KEY,
+	memberPwd VARCHAR2(1000) NOT NULL,
+	memberName VARCHAR2(30) NOT NULL,
+	regDate DATE NOT NULL
+);
+
+insert into USERS values('test', '1234', 'test', sysdate);
