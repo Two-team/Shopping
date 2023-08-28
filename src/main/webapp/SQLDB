@@ -8,13 +8,11 @@ grant resource,connect to ci;
 commit;
 -----------------------------------------
 회원 테이블
-CREATE TABLE BOOK_MEMBER(
+CREATE TABLE MEMBER(
   memberId VARCHAR2(100) PRIMARY KEY,
   memberPw VARCHAR2(100) NOT NULL,
   memberName VARCHAR2(30) NOT NULL,
-  memberAddr1 VARCHAR2(100) NOT NULL,
-  memberAddr2 VARCHAR2(100) NOT NULL,
-  memberAddr3 VARCHAR2(100) NOT NULL,
+  memberPhone VARCHAR2(30) NOT NULL,
   adminCk NUMBER NOT NULL,
   regDate DATE NOT NULL,
   money number NOT NULL,
@@ -22,4 +20,6 @@ CREATE TABLE BOOK_MEMBER(
 );
 commit;
 
-insert into book_member values('choikyumin', '1234', 'admin', 'admin', 'admin', 'admin', 'admin', 1, sysdate, 1000000, 1000000);
+insert into member values('test@gmail.com', '1234', 'test', '01012345678',1, sysdate, 1000000, 1000000);
+
+----------------------------------------

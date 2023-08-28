@@ -11,7 +11,7 @@
 	</appender>
 	
 	<!-- Application Loggers -->
-	<logger name="com.Choi.controller">
+	<logger name="com.project2.controller">
 		<level value="info" />
 	</logger>
 	

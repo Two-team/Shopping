@@ -15,7 +15,7 @@
 		<property name="jdbcUrl" value="jdbc:log4jdbc:oracle:thin:@localhost:1521:orcl"></property>
 	    <!-- Oracle 11g 경우 value="jdbc:oracle:thin:@localhost:1521:XE" --> 
 	    <!-- Oracle 19 경우 value="jdbc:oracle:thin:@localhost:1521:orcl" --> 
-	    <property name="username" value="project2"></property> 
+	    <property name="username" value="ci"></property> 
 	    <!-- Oracle 버전에 따라 계정명에 c##을 붙여주어야 하는 경우가 있습니다. -->
 	    <property name="password" value="1234"></property> 
 	</bean> 
@@ -29,6 +29,4 @@
     </bean>
     
     <mybatis-spring:scan base-package="com.project2.mapper"/>
-    <context:component-scan base-package="com.project2.model"></context:component-scan>
-    <context:component-scan base-package="com.project2.service"></context:component-scan>
 </beans>

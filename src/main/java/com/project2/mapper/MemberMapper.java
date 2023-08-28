@@ -1,11 +1,17 @@
 package com.project2.mapper;
 
-import com.project2.model.memberVO;
+import org.apache.ibatis.annotations.Mapper;
 
+import com.project2.model.MemberVO;
+
+@Mapper
 public interface MemberMapper {
-
-	//MemberMapper.xml의 memberJoin insert쿼리를 실행시켜줄 메서드 작성
+	
+	//로그인
+	public MemberVO userLogin(MemberVO memberVo) throws Exception;
 	
 	//회원가입
-	public void memberJoin(memberVO member);
+	public void userSignUp(MemberVO memberVo) throws Exception;
+
+	
 }

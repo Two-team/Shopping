@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.project2.mapper.MemberMapper">
+  	<!-- 로그인 -->
+  	<select id="userLogin" resultType="com.project2.model.MemberVO">
+		SELECT * FROM member WHERE memberId=#{memberId}
+	</select>
+  	<!-- 회원가입 -->
+  	<insert id="userSignUp">
+  		insert into member values(#{memberId}, #{memberPw}, #{memberName}, #{memberPhone},0, sysdate, 100000, 10000)
+  	</insert>
+
+  </mapper>
