@@ -32,7 +32,10 @@ public class UserLoginController {
 		
 		// 아이디 값이 없는 경우
 		if (vo == null) {
-			return "user/login";
+			return "redirect:/login";
+		} else if (!vo.getMemberPwd().equals(usersVo.getMemberPwd())) {
+			System.out.println("비번이 틀림");
+			return "redirect:/login";
 		} else { // 로그인 성공
 			session.setAttribute("member", vo.getMemberId());
 			// model.addAttribute("memberId", vo.getMemberId());
